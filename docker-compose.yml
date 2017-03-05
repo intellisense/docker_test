@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    container_name: web
+    command: bash -c "/start_web.sh"
+    restart: always
+    depends_on:
+      - worker
+    ports:
+      - "80:80"
+      - "443:443"
+
+  worker:
+    build: .
+    container_name: worker
+    command: bash -c "/start_worker.sh"
+    restart: always
+    ports:
+      - "8000:8000"

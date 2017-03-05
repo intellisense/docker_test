@@ -12,9 +12,6 @@ RUN set -x \
         python-pip \
         python-setuptools \
         python-pycurl \
-        nano \
-        wget \
-        curl \
         indent \
     && BUILD_DEPS='curl' \
     && apt-get install -qq --no-install-recommends ${BUILD_DEPS} \

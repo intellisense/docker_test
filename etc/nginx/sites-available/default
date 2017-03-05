@@ -1,5 +1,5 @@
 upstream worker {
-    server 127.0.0.1:8000;
+    server worker:8000;
 }
 
 server {

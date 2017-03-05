@@ -1,7 +1,7 @@
 import multiprocessing
 import os
 
-bind = '127.0.0.1:8000'
+bind = '0.0.0.0:8000'
 
 default_workers = multiprocessing.cpu_count() * 2 + 1
 workers = os.getenv('GUNICORN_WORKERS', os.getenv('WEB_CONCURRENCY', default_workers))
